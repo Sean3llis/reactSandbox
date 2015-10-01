@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>React!</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<script type="text/jsx">
+	var App = React.createClass({
+		getInitialState: function(){
+			return {
+				txtNode: 'the state text'
+			}
+		},
+
+		render: function(){
+			return (
+				<div className="panel">
+					<h1>{this.state.txtNode}</h1>
+					<input type="text" onChange={this.update} />
+				</div>
+				)
+		},
+
+		update: function(e){
+			this.setState({txtNode: e.target.value});
+		}
+
+	});
+
+	var Widget = React.createClass({
+		render: function(){
+
+		}
+	});
+
+
+	React.render(<App />, document.getElementById('main'))
+</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="main" class="container">
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+body {
+	background-color: #eee;
+}
+
+#main {
+	text-align: center;
+}
+
+#main .panel {
+	padding: 30px;
+}
